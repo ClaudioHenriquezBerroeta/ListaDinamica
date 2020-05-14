@@ -12,26 +12,26 @@ class ListaDinamica{
 		int i=0;
 		if(p<0) System.out.println("Posicion invalida!");
 		else{
-			while(temp.sgte!= null){
-				System.out.println("entró al while");
-				if(i==p){//encontré la posición
-					System.out.println("encontró la posicion");
-					insertar(aux,temp);
-				}
+			while((temp.sgte!= null)&&(i!=p)){
 				i++;
 				temp=temp.sgte;
 			}
 			if(i<p) System.out.println("La posición indicada no existe!");
-			insertar(aux,temp);
+			else insertar(aux,temp);
 		}
-				
-
 	}
 	private void insertar(NodoLista x,NodoLista p){
 			x.sgte=p.sgte;
 			p.sgte=x;
 	}
-	//public mostrar()
-
+	void mostrar(){
+		int i;
+		NodoLista temp=cabeza;
+		while(temp.sgte!=null){
+			System.out.print(temp.sgte.dato+"-");
+			temp=temp.sgte;
+		}
+		System.out.println("");
+	}
 
 }
