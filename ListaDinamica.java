@@ -72,13 +72,21 @@ class ListaDinamica{
 			}
 			if(i<p) System.out.println("La posición indicada no existe!");
 			else {
-				System.out.println("El elemento es: "+temp.sgte.dato);
+				//System.out.println("El elemento es: "+temp.sgte.dato);
 				return temp.sgte.dato;
 			}
 		}
 		return -1;
 	}
-
+	public int largo(){
+		int i=0;
+		NodoLista temp=cabeza;
+		while(temp.sgte!=null){
+			i++;
+			temp=temp.sgte;
+		}
+		return i;
+	}
 
 
 
