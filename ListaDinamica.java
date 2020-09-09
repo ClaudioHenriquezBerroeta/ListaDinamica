@@ -88,8 +88,18 @@ class ListaDinamica{
 		return i;
 	}
 
-
-
-
-
+  public float promedio(){
+    float suma=0;
+    float prom;
+    int num;
+    int largo=largo();
+    NodoLista aux=cabeza;
+    while(aux!=null){
+      num=aux.dato;
+      suma=suma+num;
+      aux=aux.sgte;
+    }
+    prom=suma/largo;
+    return prom;
+  }
 }
