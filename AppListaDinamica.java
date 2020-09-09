@@ -20,7 +20,7 @@ class AppListaDinamica{
 	 	}
 		return false;
 	}
-
+/*
 	public static void main(String[] args) {
 		ListaDinamica L1 = new ListaDinamica();
 		ListaDinamica L2 = new ListaDinamica();
@@ -46,4 +46,22 @@ class AppListaDinamica{
 		else
 			System.out.println("La primera lista no está contenida en la segunda!");
 	}
+*/
+	public static void main(String[] args) {
+		ListaDinamica L1 = new ListaDinamica();
+		float media;
+		L1.insertar(10,0);
+		L1.insertar(20,1);
+		L1.insertar(30,2);
+		L1.insertar(40,3);
+		L1.mostrar();
+		media=L1.promedio();
+		System.out.println("El promedio de la lista es "+ media);
+		
+	}
+
+
+
+
+
 }
